@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>RealProject Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'rgb(var(--color-background) / <alpha-value>)',
+              surface: 'rgb(var(--color-surface) / <alpha-value>)',
+              primary: '#3b82f6',    // Blue 500
+              active: '#10b981',     // Emerald 500
+              neglected: '#f59e0b',  // Amber 500
+              abandoned: '#ef4444',  // Red 500
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Light Mode Defaults (Slate 100 / White) */
+        --color-background: 241 245 249; 
+        --color-surface: 255 255 255;
+        --color-text-main: 15 23 42; /* Slate 900 */
+      }
+      .dark {
+        /* Dark Mode Defaults (Slate 900 / Slate 800) */
+        --color-background: 15 23 42;
+        --color-surface: 30 41 59;
+        --color-text-main: 248 250 252; /* Slate 50 */
+      }
+      
+      body {
+        background-color: rgb(var(--color-background));
+        color: rgb(var(--color-text-main));
+        -webkit-font-smoothing: antialiased;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      /* Custom Scrollbar for dashboard feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

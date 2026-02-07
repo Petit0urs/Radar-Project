@@ -1,0 +1,5 @@
+{
+  "name": "RealProject - The Honest Tracker",
+  "description": "A reality-first project tracker designed for wall-mounted tablets. Tracks time spent vs. actual progress with automatic status degradation based on inactivity.",
+  "requestFramePermissions": []
+}
